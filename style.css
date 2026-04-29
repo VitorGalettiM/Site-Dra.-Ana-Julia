@@ -1,0 +1,679 @@
+/* ===================================================
+   STYLE.CSS
+   Dra. Ana Julia Barraqui
+   Visual elegante / premium / moderno
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ===================================================
+   RESET
+=================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#ffffff;
+  color:#2c1e24;
+  font-family:'Jost', sans-serif;
+  overflow-x:hidden;
+}
+
+/* ===================================================
+   VARIÁVEIS
+=================================================== */
+
+:root{
+  --rosa:#d4788f;
+  --rosa-claro:#f7dde6;
+  --rosa-bg:#faf8f9;
+  --texto:#2c1e24;
+  --texto-light:#8a6a74;
+  --borda:#ecdde3;
+  --dark:#2c1e24;
+  --white:#ffffff;
+  --shadow:0 15px 40px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+/* ===================================================
+   GERAL
+=================================================== */
+
+.site-wrap{
+  width:100%;
+  overflow:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+section{
+  width:100%;
+}
+
+/* ===================================================
+   NAVBAR
+=================================================== */
+
+.snav{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 55px;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--borda);
+  position:sticky;
+  top:0;
+  z-index:999;
+  backdrop-filter:blur(10px);
+}
+
+.snav-logo{
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+  color:var(--texto);
+  font-weight:500;
+}
+
+.snav-logo span{
+  color:var(--rosa);
+  font-style:italic;
+}
+
+.snav-links{
+  display:flex;
+  gap:28px;
+}
+
+.snav-links a{
+  font-size:13px;
+  color:var(--texto-light);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  transition:.3s;
+}
+
+.snav-links a:hover{
+  color:var(--rosa);
+}
+
+.snav-cta{
+  background:var(--rosa);
+  color:#fff;
+  padding:13px 22px;
+  border-radius:40px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  transition:.3s;
+}
+
+.snav-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+/* ===================================================
+   HERO
+=================================================== */
+
+.shero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  min-height:92vh;
+  padding:50px 55px;
+  background:var(--rosa-bg);
+  position:relative;
+}
+
+.shero::before{
+  content:'';
+  position:absolute;
+  top:-90px;
+  right:-80px;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--rosa-claro) 0%, transparent 70%);
+}
+
+.shero-text{
+  z-index:2;
+}
+
+.eyebrow{
+  color:var(--rosa);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  margin-bottom:18px;
+}
+
+.shero-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:78px;
+  line-height:.95;
+  font-weight:400;
+}
+
+.shero-title em{
+  display:block;
+  color:var(--rosa);
+  font-style:italic;
+}
+
+.shero-sub{
+  margin:26px 0 34px;
+  color:var(--texto-light);
+  font-size:18px;
+  max-width:480px;
+  line-height:1.8;
+}
+
+.hero-btns{
+  display:flex;
+  gap:16px;
+}
+
+.btn-p,
+.btn-s{
+  padding:15px 24px;
+  border-radius:40px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  transition:.3s;
+}
+
+.btn-p{
+  background:var(--rosa);
+  color:#fff;
+}
+
+.btn-p:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+.btn-s{
+  border:1px solid var(--borda);
+  color:var(--texto);
+  background:#fff;
+}
+
+.btn-s:hover{
+  border-color:var(--rosa);
+  color:var(--rosa);
+}
+
+/* ===================================================
+   HERO FOTO
+=================================================== */
+
+.shero-img{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.photo-frame{
+  position:relative;
+  width:360px;
+}
+
+.frame-bg{
+  position:absolute;
+  inset:18px 0 0 18px;
+  background:var(--rosa-claro);
+  border-radius:50%;
+}
+
+.photo-ph{
+  position:relative;
+  z-index:2;
+  height:480px;
+  border-radius:220px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.photo-ph img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.photo-ph:hover img{
+  transform:scale(1.05);
+}
+
+.badge{
+  position:absolute;
+  bottom:45px;
+  left:-25px;
+  z-index:5;
+  background:#fff;
+  padding:16px 20px;
+  border-radius:18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  box-shadow:var(--shadow);
+}
+
+.badge-ic{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--rosa-bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+}
+
+.badge strong{
+  display:block;
+  font-size:15px;
+  color:var(--texto);
+}
+
+/* ===================================================
+   SEÇÕES PADRÃO
+=================================================== */
+
+.ssec{
+  padding:95px 55px;
+}
+
+.ssec.alt{
+  background:var(--rosa-bg);
+}
+
+.slabel{
+  color:var(--rosa);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  margin-bottom:14px;
+}
+
+.stitle{
+  font-family:'Cormorant Garamond', serif;
+  font-size:64px;
+  line-height:1;
+  font-weight:400;
+}
+
+.stitle em{
+  color:var(--rosa);
+  font-style:italic;
+}
+
+/* ===================================================
+   SOBRE
+=================================================== */
+
+.sobre-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+
+.sobre-ph{
+  height:520px;
+  border-radius:28px 90px 28px 90px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.sobre-ph img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.sobre-p{
+  margin-top:22px;
+  color:var(--texto-light);
+  line-height:1.9;
+  font-size:17px;
+}
+
+.stats{
+  display:flex;
+  gap:42px;
+  margin-top:34px;
+}
+
+.stat-n{
+  display:block;
+  font-family:'Cormorant Garamond', serif;
+  font-size:48px;
+  color:var(--rosa);
+}
+
+.stat-l{
+  font-size:12px;
+  color:var(--texto-light);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+/* ===================================================
+   CARDS SERVIÇOS
+=================================================== */
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:42px;
+}
+
+.scard{
+  background:#fff;
+  border:1px solid var(--borda);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:.3s;
+}
+
+.scard:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.scard-ico{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.scard h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+  margin-bottom:12px;
+  font-weight:500;
+}
+
+.scard p{
+  color:var(--texto-light);
+  line-height:1.8;
+}
+
+/* ===================================================
+   GALERIA
+=================================================== */
+
+.gal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:42px;
+}
+
+.gal-item{
+  min-height:220px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fdf0f4,#f7dde6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--rosa);
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  position:relative;
+  transition:.3s;
+}
+
+.gal-item:hover{
+  transform:scale(1.02);
+}
+
+.gal-item:first-child{
+  grid-column:span 2;
+}
+
+.gal-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#fff;
+  color:var(--rosa);
+  font-size:11px;
+  padding:7px 10px;
+  border-radius:30px;
+}
+
+/* ===================================================
+   CONTATO
+=================================================== */
+
+.form-sec{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+}
+
+.contact-info{
+  margin-top:26px;
+}
+
+.crow{
+  margin-bottom:15px;
+  color:var(--texto-light);
+}
+
+.crow strong{
+  color:var(--texto);
+}
+
+.wbtn{
+  display:inline-block;
+  margin-top:25px;
+  background:var(--rosa);
+  color:#fff;
+  padding:15px 22px;
+  border-radius:40px;
+  transition:.3s;
+}
+
+.wbtn:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+/* ===================================================
+   FORMULÁRIO
+=================================================== */
+
+.form-box{
+  background:#fff;
+  border:1px solid var(--borda);
+  border-radius:22px;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+
+.form-box h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:38px;
+  margin-bottom:25px;
+}
+
+.frow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.fg{
+  margin-bottom:16px;
+}
+
+.fg label{
+  display:block;
+  margin-bottom:8px;
+  font-size:12px;
+  color:var(--texto-light);
+  text-transform:uppercase;
+}
+
+.fg input,
+.fg select,
+.fg textarea{
+  width:100%;
+  padding:15px;
+  border:1px solid var(--borda);
+  border-radius:12px;
+  background:#faf8f9;
+  font-family:'Jost',sans-serif;
+  outline:none;
+  transition:.3s;
+}
+
+.fg input:focus,
+.fg select:focus,
+.fg textarea:focus{
+  border-color:var(--rosa);
+}
+
+.fg textarea{
+  resize:none;
+  height:120px;
+}
+
+.fbtn{
+  width:100%;
+  border:none;
+  background:var(--rosa);
+  color:#fff;
+  padding:16px;
+  border-radius:40px;
+  cursor:pointer;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  transition:.3s;
+}
+
+.fbtn:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+.sfooter{
+  background:var(--dark);
+  color:rgba(255,255,255,.65);
+  padding:32px 55px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flogo{
+  font-family:'Cormorant Garamond', serif;
+  color:#fff;
+  font-size:28px;
+}
+
+.flogo span{
+  color:#e8a4b8;
+  font-style:italic;
+}
+
+/* ===================================================
+   RESPONSIVO
+=================================================== */
+
+@media(max-width:1100px){
+
+  .shero,
+  .sobre-grid,
+  .form-sec{
+    grid-template-columns:1fr;
+  }
+
+  .cards-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gal-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .shero-title{
+    font-size:62px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .snav{
+    flex-direction:column;
+    gap:18px;
+    padding:25px;
+  }
+
+  .snav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .shero,
+  .ssec{
+    padding:60px 25px;
+  }
+
+  .cards-grid,
+  .gal-grid,
+  .frow{
+    grid-template-columns:1fr;
+  }
+
+  .stitle{
+    font-size:48px;
+  }
+
+  .shero-title{
+    font-size:54px;
+  }
+
+  .photo-frame{
+    width:100%;
+    max-width:320px;
+  }
+
+  .sfooter{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+    padding:28px 25px;
+  }
+
+}
