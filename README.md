@@ -9,29 +9,29 @@ Daniel Cardoso Martins
 
 🚀 Tecnologias Utilizadas
 
-JavaScript
-HTML5
-CSS3
+- JavaScript
+- HTML5
+- CSS3
 
 🎯 Objetivo do Projeto
 
 O projeto foi desenvolvido com foco em:
 
-Apresentação profissional da doutora
-Facilidade de navegação para os usuários
-Interface moderna e responsiva
-Acesso rápido às informações e contatos
+- Apresentação profissional da doutora
+- Facilidade de navegação para os usuários
+- Interface moderna e responsiva
+- Acesso rápido às informações e contatos
 
 📱 Funcionalidades
 
-Página institucional
-Layout responsivo (adaptado para mobile e desktop)
-Integração com contato (ex: WhatsApp)
-Interface amigável e intuitiva
+- Página institucional
+- Layout responsivo (adaptado para mobile e desktop)
+- Integração com contato (ex: WhatsApp)
+- Interface amigável e intuitiva
 
 💡 Diferenciais
 
-Design limpo e moderno
-Foco na experiência do usuário (UX)
-Estrutura simples e eficiente
-Fácil manutenção e expansão
+- Design limpo e moderno
+- Foco na experiência do usuário (UX)
+- Estrutura simples e eficiente
+- Fácil manutenção e expansão
