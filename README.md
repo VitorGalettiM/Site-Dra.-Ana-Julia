@@ -4,8 +4,8 @@ Projeto desenvolvido com o objetivo de criar um website moderno, responsivo e in
 
 👨‍💻 Desenvolvedores
 
-Vitor Galetti
-Daniel Cardoso Martins
+- Vitor Galetti
+- Daniel Cardoso Martins
 
 🚀 Tecnologias Utilizadas
 
