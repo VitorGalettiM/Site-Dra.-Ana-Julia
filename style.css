@@ -621,157 +621,179 @@ a {
 }
 
 /* ─── CONTATO ─── */
-.form-sec {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
+.contato-topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
-.contact-info {
-  margin-top: 26px;
-}
-
-.crow {
-  margin-bottom: 15px;
-  color: var(--texto-light);
-}
-
-.crow strong {
-  color: var(--texto);
-}
-
-.wbtn {
-  display: inline-block;
-  margin-top: 25px;
-  background: var(--rosa);
-  color: #fff;
-  padding: 15px 22px;
-  border-radius: 40px;
-  transition: .3s;
-  font-size: 18px;
-}
-
-.wbtn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-rose);
-}
-
-.form-box {
-  background: #fff;
-  border: 1px solid var(--borda);
-  border-radius: 22px;
-  padding: 35px;
-  box-shadow: var(--shadow);
-}
-
-.form-box h3 {
+.contato-frase {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
-  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--texto-light);
+  line-height: 1.6;
+  text-align: right;
+  font-style: italic;
+  max-width: 380px;
 }
 
-.frow {
+.contato-divisor {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--rosa), var(--borda) 60%, transparent);
+  margin: 44px 0;
+}
+
+.contato-lista {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* ── Coluna esquerda: 3 cards empilhados ── */
+.cl-infos {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
-.fg {
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.fg label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 12px;
-  color: var(--texto-light);
-  text-transform: uppercase;
-}
-
-.fg input,
-.fg select,
-.fg textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid var(--borda);
-  border-radius: 12px;
-  background: #faf8f9;
-  font-family: 'Jost', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: .3s;
-  color: var(--texto);
-}
-
-.fg input:focus,
-.fg select:focus,
-.fg textarea:focus {
-  border-color: var(--rosa);
-  box-shadow: 0 0 0 3px rgba(212, 120, 143, .1);
+.cl-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
   background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  padding: 22px 24px;
+  flex: 1;
 }
 
-.fg input.valid {
-  border-color: var(--green);
-}
-
-.fg input.invalid {
-  border-color: #e57373;
-}
-
-.fg textarea {
-  resize: none;
-  height: 120px;
-}
-
-.field-msg {
-  display: none;
-  font-size: 11px;
-  margin-top: 4px;
-}
-
-.fg.show-msg .field-msg {
-  display: block;
-}
-
-.fg.valid-group .field-msg {
-  color: var(--green);
-}
-
-.fg.invalid-group .field-msg {
-  color: #e57373;
-}
-
-.fbtn {
-  width: 100%;
-  border: none;
-  background: var(--rosa);
-  color: #fff;
-  padding: 16px;
-  border-radius: 40px;
-  cursor: pointer;
-  font-family: 'Jost', sans-serif;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  transition: .3s;
+.cl-ico {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--rosa-bg);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
-  box-shadow: 0 8px 24px rgba(212, 120, 143, .3);
+  border: 1px solid var(--borda);
 }
 
-.fbtn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-rose);
+.cl-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.fbtn:disabled {
-  opacity: .7;
-  cursor: not-allowed;
+.cl-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--rosa);
 }
+
+.cl-valor {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--texto);
+  line-height: 1.2;
+}
+
+.cl-hint {
+  font-size: 15px;
+  color: var(--texto-light);
+}
+
+/* ── Coluna direita: botão WhatsApp ── */
+.cl-wpp {
+  position: relative;
+  background: var(--rosa);
+  border-radius: 24px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(212, 120, 143, .35);
+  transition: transform .3s, box-shadow .3s;
+  cursor: pointer;
+}
+
+.cl-wpp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(212, 120, 143, .45);
+}
+
+.cl-wpp-ico {
+  font-size: 60px;
+  margin-bottom: 8px;
+  transition: transform .3s;
+}
+
+.cl-wpp:hover .cl-wpp-ico {
+  transform: scale(1.15);
+}
+
+.cl-wpp-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cl-wpp-num {
+  font-size: 16px;
+  color: rgba(255, 255, 255, .8);
+  letter-spacing: .04em;
+}
+
+.cl-wpp-cta {
+  margin-top: 16px;
+  display: inline-block;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: 10px 22px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  transition: background .3s;
+}
+
+.cl-wpp:hover .cl-wpp-cta {
+  background: rgba(255, 255, 255, .28);
+}
+
+.cl-wpp-deco {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .08);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .contato-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ─── BACK TO TOP ─── */
 #back-to-top {
@@ -969,5 +991,110 @@ a {
 
   .map-frame {
     height: 350px;
+  }
+}
+
+/* ─── TIMELINE DE CURSOS ─── */
+/* ─── CURSOS GRID ─── */
+.cursos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 22px;
+  margin-top: 52px;
+  min-height: 520px;
+}
+
+.curso-card {
+  position: relative;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  padding: 40px 38px 36px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.curso-destaque {
+  background: linear-gradient(135deg, var(--rosa-bg) 0%, #fff 100%);
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--rosa-claro);
+}
+
+.curso-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: var(--rosa-claro);
+  line-height: 1;
+  margin-bottom: 14px;
+  transition: color .3s;
+}
+
+.curso-card:hover .curso-num {
+  color: var(--rosa);
+}
+
+.tl-tag {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--rosa);
+  border: 1px solid var(--borda);
+  border-radius: 30px;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+}
+
+.curso-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  color: var(--texto);
+  transition: color .2s;
+}
+
+.curso-card:hover h3 {
+  color: var(--rosa);
+}
+
+.curso-card p {
+  color: var(--texto-light);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.curso-deco {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--rosa-claro);
+  opacity: .5;
+  pointer-events: none;
+  transition: transform .4s;
+}
+
+.curso-card:hover .curso-deco {
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .cursos-grid {
+    grid-template-columns: 1fr;
+    min-height: unset;
   }
 }
