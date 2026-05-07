@@ -66,27 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
   reveals.forEach(el => revealObs.observe(el));
 
 
-  /* ─── 5. CONTADOR ANIMADO (STATS) ─── */
-  const counters = document.querySelectorAll('[data-count]');
-  const countObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.count, 10);
-      const prefix = el.dataset.prefix || '';
-      let current = 0;
-      const step = Math.ceil(target / 60);
-      const timer = setInterval(() => {
-        current = Math.min(current + step, target);
-        el.textContent = prefix + current;
-        if (current >= target) clearInterval(timer);
-      }, 20);
-      countObs.unobserve(el);
-    });
-  }, { threshold: 0.6 });
-  counters.forEach(el => countObs.observe(el));
-
-
   /* ─── 6. MODAL DE SERVIÇOS ─── */
   const modalData = {
     limpeza: {
