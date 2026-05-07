@@ -131,12 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
   mCta.addEventListener('click', () => closeModal());
 
 
-  /* ─── 7. GALERIA — clique leva ao contato ─── */
-  document.querySelectorAll('.gal-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelector('#contato').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
 
 
   /* ─── 8. MÁSCARA DE TELEFONE ─── */
