@@ -807,41 +807,6 @@ a {
   color: var(--rosa);
 }
 
-/* ─── WHATSAPP FLUTUANTE ─── */
-.whatsapp-float {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 500;
-  background: #25D366;
-  color: #fff;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, .4);
-  transition: transform .2s;
-  animation: pulse-wa 2.5s infinite;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-@keyframes pulse-wa {
-
-  0%,
-  100% {
-    box-shadow: 0 8px 24px rgba(37, 211, 102, .4)
-  }
-
-  50% {
-    box-shadow: 0 8px 32px rgba(37, 211, 102, .7)
-  }
-}
-
 /* ─── FOOTER ─── */
 .sfooter {
   background: var(--dark);
