@@ -310,6 +310,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .photo-frame {
@@ -1097,4 +1098,8 @@ a {
     grid-template-columns: 1fr;
     min-height: unset;
   }
+}
+
+.site-wrap {
+  overflow-x: hidden;
 }
