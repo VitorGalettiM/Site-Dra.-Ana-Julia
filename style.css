@@ -793,6 +793,10 @@ a {
   .contato-lista {
     grid-template-columns: 1fr;
   }
+
+  .sobre-ph {
+    display: none;
+  }
 }
 
 
